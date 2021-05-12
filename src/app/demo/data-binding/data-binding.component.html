@@ -1,0 +1,38 @@
+<div class="container main-container">
+  <h3>Interpolation</h3>
+  <p>Numeros de cliques: {{ contadorClique }}</p>
+
+  <br />
+
+  <h3>Property Binding</h3>
+  <button class="btn btn-info" [disabled]="contadorClique >= 3">Info</button>
+  <img [src]="urlImagem" height="70px" width="70px" />
+
+  <br />
+
+  <h3>Event Binding</h3>
+  <button class="btn btn-warning" (click)="adicionarClique()">Clique</button>
+  <button
+    class="btn btn-danger"
+    (click)="zerarContador()"
+    [disabled]="contadorClique < 5"
+  >
+    Zerar Contador
+  </button>
+
+  <br />
+
+  <h3>Two-way Binding</h3>
+  <input
+    type="text"
+    [ngModel]="nome"
+    (ngModelChange)="nome = $event"
+    placeholder="Digite seu nome"
+  />
+  <br />
+  <label> Seu nome é {{ nome }}</label>
+
+  <!-- <input type="text" (keyup)="keyUp($event)" placeholder="Digite seu nome" />
+  <br />
+  <label> Seu nome é {{ nome }}</label> -->
+</div>
