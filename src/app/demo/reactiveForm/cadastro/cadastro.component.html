@@ -41,7 +41,18 @@
             type="text"
             placeholder="CPF (Requerido)"
             formControlName="cpf"
+            cpf
+            [textMask]="{ mask: MASKS.cpf.textMask }"
           />
+          <span
+            class="text-danger"
+            *ngIf="
+              cadastroForm.get('cpf')?.errors?.cpf &&
+              (cadastroForm.get('cpf').touched || cadastroForm.get('cpf').dirty)
+            "
+          >
+            <p>CPF inválido</p>
+          </span>
         </div>
       </div>
 
@@ -95,6 +106,16 @@
             placeholder="Senha (Requerido)"
             formControlName="senha"
           />
+          <span
+            class="text-danger"
+            *ngIf="
+              cadastroForm.get('senha')?.errors?.rangeLength &&
+              (cadastroForm.get('senha').touched ||
+                cadastroForm.get('senha').dirty)
+            "
+          >
+            <p>Senha deve conter de 6 a 15 caracteres</p>
+          </span>
         </div>
       </div>
 
