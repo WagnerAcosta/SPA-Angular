@@ -5,6 +5,7 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { DataBindingComponent } from './demo/data-binding/data-binding.component';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
+import { CadastroComponent } from './demo/reactiveForm/cadastro/cadastro.component';
 
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,5 +32,9 @@ export const rootRouterConfig: Routes = [
   {
     path: 'produto-detalhe/:id',
     component: ListaProdutoComponent,
+  },
+  {
+    path: 'cadastro',
+    component: CadastroComponent,
   },
 ];

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { rootRouterConfig } from './app.routes';
@@ -19,6 +19,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { DataBindingComponent } from './demo/data-binding/data-binding.component';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
+import { CadastroComponent } from './demo/reactiveForm/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +31,16 @@ import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.co
     ContatoComponent,
     DataBindingComponent,
     ListaProdutoComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })],
   ],
   providers: [ProdutoService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
