@@ -1,1 +1,11 @@
-<p>produto-dashboard works!</p>
+<div class="container main-container">
+  <h1>Lista de Produtos</h1>
+
+  <div class="row text-center">
+    <produto-card-detalhe
+      class="col-md-4"
+      *ngFor="let p of produtos"
+      [produtoCard]="p"
+    ></produto-card-detalhe>
+  </div>
+</div>
