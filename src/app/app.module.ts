@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { rootRouterConfig } from './app.routes';
+import { AppRoutingModule } from './app.routes';
 import { ProdutoService } from './produtos/produtos.service';
 
 import { registerLocaleData } from '@angular/common';
@@ -41,7 +41,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
     TextMaskModule,
     CustomFormsModule,
     NavegacaoModule,
-    [RouterModule.forRoot(rootRouterConfig, { useHash: false })],
+    AppRoutingModule,
   ],
   providers: [ProdutoService],
   bootstrap: [AppComponent],
