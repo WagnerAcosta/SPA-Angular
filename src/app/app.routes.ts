@@ -42,9 +42,9 @@ const rootRouterConfig: Routes = [
     //Lazy Loading
     path: 'arqmodulo',
     loadChildren: () =>
-      import(
-        './demo/arquitetura-componentes/produto-dashboard/produto.module'
-      ).then((lazy) => lazy.ProdutoModule),
+      import('./demo/arquitetura-componentes/produto.module').then(
+        (lazy) => lazy.ProdutoModule
+      ),
   },
 ];
 
