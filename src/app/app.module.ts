@@ -16,21 +16,16 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './navegacao/menu/menu.component';
-import { HomeComponent } from './navegacao/home/home.component';
-import { FooterComponent } from './navegacao/footer/footer.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { DataBindingComponent } from './demo/data-binding/data-binding.component';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { CadastroComponent } from './demo/reactiveForm/cadastro/cadastro.component';
+import { NavegacaoModule } from './navegacao/navegacao.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    HomeComponent,
-    FooterComponent,
     SobreComponent,
     ContatoComponent,
     DataBindingComponent,
@@ -45,6 +40,7 @@ import { CadastroComponent } from './demo/reactiveForm/cadastro/cadastro.compone
     NgBrazil,
     TextMaskModule,
     CustomFormsModule,
+    NavegacaoModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })],
   ],
   providers: [ProdutoService],
