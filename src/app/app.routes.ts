@@ -35,8 +35,16 @@ const rootRouterConfig: Routes = [
     component: ListaProdutoComponent,
   },
   {
-    path: 'cadastro',
+    path: 'formulario',
     component: CadastroComponent,
+  },
+  {
+    //Lazy Loading
+    path: 'arqmodulo',
+    loadChildren: () =>
+      import(
+        './demo/arquitetura-componentes/produto-dashboard/produto.module'
+      ).then((lazy) => lazy.ProdutoModule),
   },
 ];
 
