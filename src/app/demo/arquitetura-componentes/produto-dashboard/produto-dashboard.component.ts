@@ -28,12 +28,16 @@ export class ProdutoDashboardComponent implements OnInit {
         imagem: 'monitor.jpg',
       },
       {
-        id: 1,
+        id: 3,
         nome: 'Samgung J4',
         ativo: true,
         valor: 100,
         imagem: 'mouse.jpg',
       },
     ];
+  }
+
+  alterarStatus(event: Produto) {
+    event.ativo = !event.ativo;
   }
 }

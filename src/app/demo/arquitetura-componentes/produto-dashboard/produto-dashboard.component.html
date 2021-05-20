@@ -8,6 +8,7 @@
       class="col-md-4"
       *ngFor="let p of produtos"
       [produtoCard]="p"
+      (status)="alterarStatus($event)"
     ></produto-card-detalhe>
   </div>
 </div>
