@@ -7,6 +7,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { DataBindingComponent } from './demo/data-binding/data-binding.component';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { CadastroComponent } from './demo/reactiveForm/cadastro/cadastro.component';
+import { NotFoundComponent } from './navegacao/not-found/not-found.component';
 
 const rootRouterConfig: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -46,6 +47,7 @@ const rootRouterConfig: Routes = [
         (lazy) => lazy.ProdutoModule
       ),
   },
+  { path: '**', component: NotFoundComponent }, //Caso não encontre a rota, sem ficar em ultimo
 ];
 
 @NgModule({
