@@ -23,7 +23,7 @@ export class ProdutoDashboardComponent implements OnInit {
       {
         id: 2,
         nome: 'TV',
-        ativo: true,
+        ativo: false,
         valor: 100,
         imagem: 'monitor.jpg',
       },
